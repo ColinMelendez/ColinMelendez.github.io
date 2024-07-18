@@ -1,4 +1,6 @@
 import './style.css'
+// Import the theme switcher script so it gets bundled with the application
+import './minimal-theme-switcher.js'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
