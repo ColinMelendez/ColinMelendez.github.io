@@ -1,0 +1,206 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+} */
+/* a:hover {
+  color: #535bf2;
+} */
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #3178c6aa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+} */
+/* button:hover {
+  border-color: #646cff;
+} */
+/* button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+:root {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.handwave {
+  animation-name: handwave;
+  animation-duration: 3.75s;
+  transform-origin: 75% 75%;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+@keyframes handwave {
+  0% {
+    transform: rotate(0deg);
+  }
+  7.5% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(12deg);
+  }
+  22.5% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(9deg);
+  }
+  37.5% {
+    transform: rotate(-7deg);
+  }
+  45% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .handwave {
+    /* keep playing the fun little wave if the user hasnt disabled motion */
+    animation-iteration-count: infinite;
+  }
+}
+
+.picturebox {
+  position: relative;
+  transform-style: preserve-3d;
+  border-radius: 0px;
+}
+
+.picturebox::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(
+    to top right,
+    #00eeffb8,
+    #00f0ffb8,
+    #006effb8,
+    #0048ffaf,
+    #1d59f096,
+    #7cbeee85,
+    #f5aa87b8,
+    #f48b5cb8,
+    #f48b5cb8,
+    #f4825cb8,
+    #ff77b7b8,
+    #ff77d1b8
+  );
+  filter: blur(10px);
+  transform: translate3d(-30px, -30px, -1px);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/**
+* all the major sections should be given the container class for picocss,
+* but the header and footer contents dont really want to have everything centered
+* by default all the time
+*/
+main,
+section.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack children vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+/* Media queries for responsive margins */
+@media (min-width: 768px) {
+  main.container {
+    max-width: 70%; /* Larger margin for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  main.container {
+    max-width: 900px; /* Even larger margin for large screens */
+  }
+}
+
+@media (min-width: 1440px) {
+  main.container {
+    max-width: 980px; /* Center content with generous margins on extra-large screens */
+  }
+}
