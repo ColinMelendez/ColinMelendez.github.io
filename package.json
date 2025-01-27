@@ -14,5 +14,13 @@
   },
   "dependencies": {
     "@picocss/pico": "2.0.6"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
